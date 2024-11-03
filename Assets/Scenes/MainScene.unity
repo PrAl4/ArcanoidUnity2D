@@ -1049,13 +1049,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73cc59d340af1e14cabdd413c205a3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 30
   ball_velocity_mult: 0.02
   blue_pref: {fileID: 5766108265458821299, guid: 14b6d85fac45c2e42abbdf312c242f15, type: 3}
   red_pref: {fileID: 8592335267130942353, guid: 0591805bc7f26fa4d968c7ebd26de42f, type: 3}
   green_pref: {fileID: 95536433643050620, guid: 750d5833a3d37f4488e49dab21f84e3f, type: 3}
   yellow_pref: {fileID: 7088444225467277356, guid: 69a85986b0a89e44abc4d91cd561a435, type: 3}
   ball_pref: {fileID: 8454252823400071369, guid: 97c84d90d6e077b46a868ad38aab8033, type: 3}
+  XO_pref: {fileID: 9201839001605425041, guid: 537dda9de969ce748a157fc5e40da882, type: 3}
   game_data: {fileID: 11400000, guid: 73495f833e6ea0d47950df0d4b2131c5, type: 2}
   point_sound: {fileID: 8300000, guid: 5ddcf25e3ebcaf646a024ae93df49813, type: 3}
 --- !u!1 &1947165614
@@ -1196,6 +1197,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 29313264183582734, guid: 97c84d90d6e077b46a868ad38aab8033, type: 3}
+      propertyPath: game_data
+      value: 
+      objectReference: {fileID: 11400000, guid: 73495f833e6ea0d47950df0d4b2131c5, type: 2}
     - target: {fileID: 29313264183582734, guid: 97c84d90d6e077b46a868ad38aab8033, type: 3}
       propertyPath: ball_initial_force.x
       value: 100

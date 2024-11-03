@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject green_pref;
     public GameObject yellow_pref;
     public GameObject ball_pref;
+    public GameObject XO_pref;
     static Collider2D[] colliders = new Collider2D[50];
     static ContactFilter2D contact_filter = new ContactFilter2D();
     public GameDataScript game_data;
@@ -111,6 +112,7 @@ public class PlayerScript : MonoBehaviour
         CreateBlocks(red_pref, x_max, y_max, 1 + level, 10);
         CreateBlocks(green_pref, x_max, y_max, 1 + level, 12);
         CreateBlocks(yellow_pref, x_max, y_max, 2 + level, 15);
+        CreateBlocks(XO_pref, x_max, y_max, level, 4);
         CreateBalls();
     }
 

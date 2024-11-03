@@ -12,6 +12,7 @@ public class GameDataScript : ScriptableObject
     public int points_to_ball = 0;
     public bool music = true;
     public bool sound = true;
+    public int destroy_count = 0;
 
     public void Reset()
     {
@@ -19,6 +20,7 @@ public class GameDataScript : ScriptableObject
         balls = 6;
         points = 0;
         points_to_ball = 0;
+        destroy_count = 0;
     }
 
     public void Save()
@@ -29,6 +31,7 @@ public class GameDataScript : ScriptableObject
         PlayerPrefs.SetInt("points_to_ball", points_to_ball);
         PlayerPrefs.SetInt("music", music ? 1 : 0);
         PlayerPrefs.SetInt("sound", sound ? 1 : 0);
+        PlayerPrefs.SetInt("destroy_count", destroy_count);
     }
 
     public void Load()
@@ -39,6 +42,7 @@ public class GameDataScript : ScriptableObject
         points_to_ball = PlayerPrefs.GetInt("points_to_ball", 0);
         music = PlayerPrefs.GetInt("music", 1) == 1;
         sound = PlayerPrefs.GetInt("sound", 1) == 1;
+        destroy_count = PlayerPrefs.GetInt("destroy_count", 0);
     }
 
 }
