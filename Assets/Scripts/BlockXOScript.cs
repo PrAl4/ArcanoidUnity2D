@@ -13,11 +13,12 @@ public class BlockXOScript : MonoBehaviour
     PlayerScript player_script;
     public GameDataScript game_data;
     GameObject[] blocks;
+    int blocks_lenght;
 
     private void Awake()
     {
         blocks = GameObject.FindGameObjectsWithTag("BlockXO");
-        Debug.Log(blocks.Length);
+        
     }
 
     void Start()
@@ -28,6 +29,7 @@ public class BlockXOScript : MonoBehaviour
             text_component.text = hit_to_destroy;
         }
         player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        blocks_lenght = FindObjectsOfType<BlockXOScript>().Length;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -41,8 +43,8 @@ public class BlockXOScript : MonoBehaviour
         {
             hit_to_destroy = "O";
             game_data.destroy_count--;
+
         }
-        Debug.Log(game_data.destroy_count);
         if(game_data.destroy_count == blocks.Length)
         {
             for(int i = 0; i < blocks.Length; i++)

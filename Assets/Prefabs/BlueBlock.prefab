@@ -284,8 +284,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 2092893649111226296}
+  bonus_prefab: {fileID: 2852708051994602882, guid: 5e65adfe95089ed42ba77a0252a57839, type: 3}
   hit_to_destroy: 3
   points: 30
+  backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+  textColor: {r: 0, g: 0, b: 0, a: 0}
+  text: 
 --- !u!212 &5815964491278893571
 SpriteRenderer:
   m_ObjectHideFlags: 0

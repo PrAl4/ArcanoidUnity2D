@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text_obj: {fileID: 1608135249363923970}
+  bonus_prefab: {fileID: 2852708051994602882, guid: 5e65adfe95089ed42ba77a0252a57839, type: 3}
   hit_to_destroy: 2
   points: 20
 --- !u!212 &1469136878402641732

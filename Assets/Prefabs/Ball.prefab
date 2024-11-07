@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5401771261759030918}
   - component: {fileID: 9116674404708118047}
   - component: {fileID: 6637413264733262465}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +50,7 @@ MonoBehaviour:
   ball_initial_force: {x: 100, y: 300}
   hit_sound: {fileID: 8300000, guid: f8915ec582844dc4089ad68ae8ecb83a, type: 3}
   lose_sound: {fileID: 8300000, guid: 86cba56864834804d84e7685057261c4, type: 3}
+  player_script: {fileID: 0}
 --- !u!212 &5401771261759030918
 SpriteRenderer:
   m_ObjectHideFlags: 0

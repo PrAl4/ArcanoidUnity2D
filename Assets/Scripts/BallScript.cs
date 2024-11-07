@@ -12,8 +12,7 @@ public class BallScript : MonoBehaviour
     AudioSource audio_src;
     public AudioClip hit_sound;
     public AudioClip lose_sound;
-    public GameDataScript game_data;
-
+    public PlayerScript player_script;
 
     void Start()
     {
@@ -21,6 +20,7 @@ public class BallScript : MonoBehaviour
         player_obj = GameObject.FindGameObjectWithTag("Player");
         delta_x = transform.position.x;
         audio_src = Camera.main.GetComponent<AudioSource>();
+        player_script = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
     }
 
 
@@ -51,13 +51,18 @@ public class BallScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
- //       if(game_data.sound) audio_src.PlayOneShot(lose_sound, 5);
-        Destroy(gameObject);
-        player_obj.GetComponent<PlayerScript>().BallDestroyed();
+        if(player_script.game_data.sound) 
+            audio_src.PlayOneShot(lose_sound, 5);
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+            player_obj.GetComponent<PlayerScript>().BallDestroyed();
+        }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(game_data.sound) audio_src.PlayOneShot(hit_sound, 5);
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (player_script.game_data.sound)
+            audio_src.PlayOneShot(hit_sound, 5);
+    }
 }

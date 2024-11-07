@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c460f7dc47b2c468d5512c901fb95c, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  rest_on_start: 0
+  rest_on_start: 1
   level: 1
-  balls: 6
-  points: 0
-  points_to_ball: 0
+  balls: 5
+  points: 370
+  points_to_ball: 70
   music: 1
   sound: 1
-  destroy_count: 0
+  destroy_count: 1
   music_volume: 0.8345521
   sfx_volume: 0.5

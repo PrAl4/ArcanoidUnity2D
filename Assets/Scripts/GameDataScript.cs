@@ -52,4 +52,9 @@ public class GameDataScript : ScriptableObject
         sfx_volume = PlayerPrefs.GetFloat("sfx_volume", 0.5f);
     }
 
+    public void PlusBalls(int plus)
+    {
+        PlayerPrefs.SetInt("balls", balls + plus);
+    }
+
 }

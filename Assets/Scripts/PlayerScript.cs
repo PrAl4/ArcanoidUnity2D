@@ -92,10 +92,8 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    void CreateBalls()
+    public void CreateBalls(int count)
     {
-        //count = 2 ??
-        int count = 1;
         if (game_data.balls == 1) count = 1;
         for (int i = 0; i < count; i++)
         {
@@ -116,7 +114,7 @@ public class PlayerScript : MonoBehaviour
         CreateBlocks(green_pref, x_max, y_max, 1 + level, 12);
         CreateBlocks(yellow_pref, x_max, y_max, 2 + level, 15);
         CreateBlocks(XO_pref, x_max, y_max, level, 4);
-        CreateBalls();
+        CreateBalls(1);
     }
 
     void SetBackground()
@@ -150,13 +148,17 @@ public class PlayerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         if (GameObject.FindGameObjectsWithTag("Ball").Length == 0) 
-        { 
-            if(game_data.balls > 0) CreateBalls();
-        }
-        else
         {
-            game_data.Reset();
-            SceneManager.LoadScene("MainScene");
+            Debug.Log(game_data.balls);
+            if (game_data.balls > 0)
+            {
+                CreateBalls(1);
+            }
+            else
+            {
+                game_data.Reset();
+                SceneManager.LoadScene("MainScene");
+            }
         }
     }
 
